@@ -7,7 +7,7 @@ let aggregate = () => {
     window.location.href = "aggregates.html"
 }
 window.onload=()=>{
-    let username = sessionStorage.getItem('username');
+    let username = sessionStorage.getItem('name');
     if (username === null) {
         window.location.href = "index.html"
     }

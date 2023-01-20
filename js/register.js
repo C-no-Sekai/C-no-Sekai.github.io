@@ -2,7 +2,7 @@ window.onload = () => {
     sessionStorage.clear();
 }
 
-async function register() {
+async function submitForm() {
     const login = document.getElementById('login');
     const password = document.getElementById('password');
     const section = document.getElementById('section');
@@ -18,10 +18,12 @@ async function register() {
         'Content-Type': 'application/json'},
         'body': JSON.stringify(data)});
     request = await request.json();
-    if(request.result === "success") {
+    if(request.result === "pending") {
         const wait = document.getElementById('incorrect_pass');
         wait.textContent = "Request Received! Your Account will be created after Verification";
         wait.style.display = "block";
+
+        setTimeout(() => window.location.href = "index.html", 4000)
     } else {
         const error = document.getElementById('incorrect_pass');
         document.getElementById('password').value = "";

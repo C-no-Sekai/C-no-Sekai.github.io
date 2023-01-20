@@ -19,8 +19,8 @@ let validate = async function() {
     console.log(response);
     if (response.result === "success") {
         sessionStorage.setItem('username', data.login);
+        sessionStorage.setItem('name', response.name)
         window.location.href = "activities.html"
-        document.getElementById("custom_message").textContent = "Welcome!! "+response.name
     } else {
         const error = document.getElementById('incorrect_pass');
         document.getElementById('password').value = "";
