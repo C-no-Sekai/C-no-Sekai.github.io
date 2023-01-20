@@ -30,16 +30,5 @@ let validate = async function() {
 }
 
 let register = () => {
-
-    const login = document.getElementById('login'); 
-    const password = document.getElementById('password');
-    const remember = document.getElementById('checkbox');
-    const data = {
-        login: login.value,
-        password: password.value
-    }
-    password.value = "";
-    const wait = document.getElementById('incorrect_pass');
-    wait.textContent = "Request Received! Your Account will be created after Verification";
-    wait.style.display = "block";
+    window.location.href = "register.html"
 }
