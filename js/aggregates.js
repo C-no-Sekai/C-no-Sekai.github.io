@@ -236,8 +236,19 @@ let view = async (btn) => {
   });
   response = await response.json();
   img = response.image;
-
-  // Display the image
   const placeholder = document.getElementById("images");
   placeholder.innerHTML = `<img id='sub_image' class="img-fluid" src=data:image/png;base64,${img}>`;
+  const modal_trend = document.getElementById("modal");
+  modal_trend.style.display = "block";
+  modal_trend.showModal();
 };
+let close_modal = () => {
+  const modal_trend = document.getElementById("modal");
+  modal_trend.close();
+  modal_trend.style.display = "none";
+};
+document.addEventListener("keydown", (evt) => {
+  if (evt.key === "Escape") {
+    close_modal();
+  }
+});

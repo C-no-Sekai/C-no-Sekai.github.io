@@ -34,3 +34,7 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
+
+#modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
