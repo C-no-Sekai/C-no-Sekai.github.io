@@ -58,9 +58,20 @@ let update_table = async () => {
   new_html = "";
   results.forEach((subject) => {
     new_html += "<tr>";
-    for (let i = 0; i < 13; i++) new_html += `<td>${subject[i]}</td>`;
-    if (subject[1] != "-")
+    for (let i = 0; i < 13; i++) {
+      new_html += `<td>${subject[i]}</td>`;
+      if (i === 12) {
+        new_html += `<td><button class='edit_btn btn btn-warning' onclick='view(this)' id=${
+          subject[0] + "Trend"
+        }>${subject[0]}</button></td>`;
+      }
+    }
+    if (subject[1] != "-") {
       new_html += `<td><button class='edit_btn btn btn-danger' onclick='edit_record(this)' id=${subject[0]}>Edit</button></td>`;
+    } else {
+      new_html += `<td><button class='edit_btn btn btn-danger' onclick='edit_record(this)' id=${subject[0]} disabled>Edit</button></td>`;
+    }
+
     new_html += "</tr>";
   });
   document.getElementById("footer_call").classList.add("position-sticky");
