@@ -12,7 +12,7 @@ let get_terms = async function () {
   // Get term List from API
   let username_fetch_data = { login: sessionStorage.getItem("username") };
   console.log(sessionStorage.getItem("username"));
-  let response = await fetch("http://127.0.0.1:8000/getTerms", {
+  let response = await fetch("https://the-qalam.herokuapp.com/getTerms", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -42,7 +42,7 @@ let update_table = async () => {
     }
   }
   // Results From API fetched, now draw table
-  results = await fetch("http://127.0.0.1:8000/getGrades", {
+  results = await fetch("https://the-qalam.herokuapp.com/getGrades", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -139,7 +139,7 @@ let save_record = async (btn) => {
     midterm_weight: oht_score,
     finals_weight: final_score,
   };
-  results = await fetch("http://127.0.0.1:8000/editWeightage", {
+  results = await fetch("https://the-qalam.herokuapp.com/editWeightage", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -223,7 +223,7 @@ let view = async (btn) => {
   const term = btns[active].nextSibling.textContent.toLowerCase();
 
   // Fetch Image from API
-  let response = await fetch("http://127.0.0.1:8000/getImage", {
+  let response = await fetch("https://the-qalam.herokuapp.com/getImage", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

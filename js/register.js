@@ -11,7 +11,7 @@ async function submitForm() {
     password: password.value,
     section: section.value,
   };
-  request = await fetch("http://127.0.0.1:8000/addUser", {
+  request = await fetch("https://the-qalam.herokuapp.com/addUser", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
