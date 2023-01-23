@@ -25,7 +25,7 @@ async function submitForm() {
       "Request Received! Your Account will be created after Verification";
     wait.style.display = "block";
 
-    setTimeout(() => (window.location.href = "index.html"), 4000);
+    setTimeout(() => (window.location.href = "login.html"), 4000);
   } else {
     const error = document.getElementById("incorrect_pass");
     document.getElementById("password").value = "";

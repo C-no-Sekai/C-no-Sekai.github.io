@@ -1,7 +1,7 @@
 window.onload = () => {
   let username = sessionStorage.getItem("username");
   if (username === null) {
-    window.location.href = "index.html";
+    window.location.href = "login.html";
   }
   let response = fetch("https://the-qalam.herokuapp.com/fillForms", {
     method: "POST",

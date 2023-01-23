@@ -1,7 +1,7 @@
 window.onload = () => {
   let username = sessionStorage.getItem("name");
   if (username === null) {
-    window.location.href = "index.html";
+    window.location.href = "login.html";
   }
   document.getElementById(
     "username_session"
