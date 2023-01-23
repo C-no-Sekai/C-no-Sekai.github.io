@@ -74,7 +74,6 @@ let update_table = async () => {
 
     new_html += "</tr>";
   });
-  document.getElementById("footer_call").classList.add("position-sticky");
   const my_table = document.getElementById("table_body");
   my_table.innerHTML = new_html;
 };
