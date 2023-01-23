@@ -231,13 +231,13 @@ let view = async (btn) => {
     body: JSON.stringify({
       term: term,
       login: sessionStorage.getItem("username"),
-      subject: subject
+      subject: subject,
     }),
   });
   response = await response.json();
   img = response.image;
 
   // Display the image
-  const placeholder = document.getElementById('images');
-  placeholder.innerHTML = `<img id='sub_image' src=data:image/png;base64,${img}>`;
-}
+  const placeholder = document.getElementById("images");
+  placeholder.innerHTML = `<img id='sub_image' class="img-fluid" src=data:image/png;base64,${img}>`;
+};
