@@ -61,7 +61,7 @@ let update_table = async () => {
     for (let i = 0; i < 13; i++) {
       new_html += `<td>${subject[i]}</td>`;
       if (i === 12) {
-        new_html += `<td><button class='edit_btn btn btn-warning' onclick='view(this)' id=${
+        new_html += `<td><button class='btn btn-warning' onclick='view(this)' id=${
           subject[0] + "Trend"
         }>${subject[0]}</button></td>`;
       }
