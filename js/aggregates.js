@@ -208,3 +208,36 @@ let edit_record = (btn) => {
   assign.innerHTML = `<input type='number' id='assign1' value=${assign.textContent} style="width:4vw;" class="editable-field" \>`;
   quiz.innerHTML = `<input type='number' id='quiz1' value=${quiz.textContent} style="width: 4vw;" class="editable-field" \>`;
 };
+
+let view = async (btn) => {
+  const subject = btn.textContent;
+  const btns = document.getElementsByClassName("terms_radio");
+  let active = 0;
+  for (let index = 0; index < btns.length; index++) {
+    if (btns[index].checked) {
+      // Use this to get results of table from API
+      active = index;
+      break;
+    }
+  }
+  const term = btns[active].nextSibling.textContent.toLowerCase();
+
+  // Fetch Image from API
+  let response = await fetch("http://127.0.0.1:8000/getImage", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      term: term,
+      login: sessionStorage.getItem("username"),
+      subject: subject
+    }),
+  });
+  response = await response.json();
+  img = response.image;
+
+  // Display the image
+  const placeholder = document.getElementById('images');
+  placeholder.innerHTML = `<img id='sub_image' src=data:image/png;base64,${img}>`;
+}
