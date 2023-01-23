@@ -200,12 +200,12 @@ let edit_record = (btn) => {
   const assign = lab.previousElementSibling;
   const quiz = assign.previousElementSibling;
 
-  oht.innerHTML = `<input type='number' min = "0" max = "100"  id='oht1' value=${oht.textContent} style="width: 4vw;" class="editable-field"\>`;
-  project.innerHTML = `<input type='number'  min = "0" max = "100" id='project1' value=${project.textContent} style="width: 4vw;" class="editable-field" \>`;
-  lab.innerHTML = `<input type='number' id='lab1'  min = "0" max = "100" value=${lab.textContent} style="width: 4vw;" class="editable-field" \>`;
-  final.innerHTML = `<input type='number' id='final1' min = "0" max = "100"  value=${final.textContent} style="width: 4vw;" class="editable-field" \>`;
-  assign.innerHTML = `<input type='number' id='assign1' min = "0" max = "100"  value=${assign.textContent} style="width:4vw;" class="editable-field" \>`;
-  quiz.innerHTML = `<input type='number' id='quiz1' min = "0" max = "100" value=${quiz.textContent} style="width: 4vw;" class="editable-field" \>`;
+  oht.innerHTML = `<input style="width: 50px;" type='number' min = "0" max = "100"  id='oht1' value=${oht.textContent} style="width: 4vw;" class="editable-field"\>`;
+  project.innerHTML = `<input type='number' style="width: 50px;"  min = "0" max = "100" id='project1' value=${project.textContent} style="width: 4vw;" class="editable-field" \>`;
+  lab.innerHTML = `<input type='number' style="width: 50px;" id='lab1'  min = "0" max = "100" value=${lab.textContent} style="width: 4vw;" class="editable-field" \>`;
+  final.innerHTML = `<input type='number'  style="width: 50px;" id='final1' min = "0" max = "100"  value=${final.textContent} style="width: 4vw;" class="editable-field" \>`;
+  assign.innerHTML = `<input type='number' style="width: 50px;" id='assign1' min = "0" max = "100"  value=${assign.textContent} style="width:4vw;" class="editable-field" \>`;
+  quiz.innerHTML = `<input type='number'  style="width: 50px;" id='quiz1' min = "0" max = "100" value=${quiz.textContent} style="width: 4vw;" class="editable-field" \>`;
 };
 
 let view = async (btn) => {
