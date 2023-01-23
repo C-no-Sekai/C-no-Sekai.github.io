@@ -63,7 +63,7 @@ let update_table = async () => {
       if (i === 12) {
         new_html += `<td><button class='btn btn-warning' onclick='view(this)' id=${
           subject[0] + "Trend"
-        }>${subject[0]}</button></td>`;
+        }>${subject[0].split('(')[0]}</button></td>`;
       }
     }
     if (subject[1] != "-") {
