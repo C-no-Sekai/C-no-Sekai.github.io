@@ -209,7 +209,7 @@ let edit_record = (btn) => {
 };
 
 let view = async (btn) => {
-  const subject = btn.textContent;
+  const subject = btn.id.split('Trend')[0];
   const btns = document.getElementsByClassName("terms_radio");
   let active = 0;
   for (let index = 0; index < btns.length; index++) {
